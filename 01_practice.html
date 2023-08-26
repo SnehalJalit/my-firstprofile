@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            height: 100vh;
+            color: #575557;
+            background: linear-gradient(-140deg,#ff65c5,#fa909d,#fcce6c);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .card{display:flex;
+        align-items: center;
+        width: 75vw;
+        max-width: 650px;
+        padding: 50px 30px 50px 20px;
+        background: #ffffff;
+        border-radius: 24px;
+    }
+    .card img{
+        max-width: 280px;
+        width: 32vw;
+        height: 270px;
+        object-fit: cover;
+        margin-left: -60px;
+        margin-right: 40px;
+        border-radius: inherit;
+    }
+    h2,h3{
+        font-weight: 400;
+    }
+    h3,label{
+        opacity: 0.5;
+    }
+    .card h2{
+        font-size: 28px;
+        margin: 0;
+    }
+    .card h3{
+        font-size: 16px;
+        margin:  0 0  20px;
+    }
+    .card  .buttons{
+        display: inline-flex;
+        gap: 10px;
+    }
+    .card button{
+        border: 1px solid #a7a7a7;
+        background: transparent;
+        color: #a7a7a7;
+        font-family: inherit;
+        padding: 16px 20px;
+        font-size: 18px;
+        border-radius: 6px;
+        min-width: 120px;
+    }
+    .card button.primary{
+        background: #fe5c89;
+        color: #f9f9f9;
+        border: 0;
+    }
+    .card .stats{
+        display: block;
+        font-style: normal;
+        font-size: 26px;
+    }
+    @media (width<=720px){
+        .card{
+            margin: 0 40px;
+            padding-left: 50px;
+            padding-right: 50px;
+            width: 100%;
+            text-align: center;
+            flex-direction: column;
+        }
+        .card h2{
+            font-size: 30px;
+        }
+        .card img{
+            margin: -100px 0 30px 0;
+            width:100%;
+            max-width: 1000px;
+        }
+        .card .stats var{
+            min-width: 90px;
+        }
+        .card button {
+            min-width: 160px;
+        }
+    }
+        
+    
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="data:image/jpeg;base64,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"/>
+    <div>
+    <h2>Snehal Jalit</h2>
+    <h3>Senior UX/UI Designer</h3>
+    <ul><li>
+        <var>42</var>
+        <label>posts</label>
+    </li></ul>
+    <nav class="button">
+        <button class="primary">follow</button>
+        <button>Message</button>
+    </nav>
+    </div></div>
+</body>
+</html>
